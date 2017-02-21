@@ -1,0 +1,339 @@
+/*
+Project Name: Relaxr Landing Page
+Author: JP Horsfield
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+	-moz-box-sizing: border-box; /* Firexfox */
+	-webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+	box-sizing: border-box; /* IE */
+	/*border: 2px solid red;*/
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/*******************************************
+/*I'm using rem sizing for this project to see
+/*if I can get the granularity of control 
+/*I need whilst making responsive design easy
+/*to implement
+/*********************************************/
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+/*********************************************
+/*Setting root font size to this specific value
+/*to cope with different browsers not setting
+/*font sizes the same - older versions particularly
+/********************************************/
+html {
+	font-size: 100.01%;
+}
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	
+}
+h1 {
+	font-family: 'Open Sans';
+	font-weight: 800;
+	font-size: 1.5rem;
+	color: rgba(255,255,255,1);	
+}
+header {
+	background: url('../images/header_bg.jpg') no-repeat top center rgba(0,0,0,1);
+	background-size: cover;
+	margin: 0 auto;
+	height: 43rem;
+	padding: 3rem 0 0 0;
+}
+section {
+	width: 60rem;
+	margin: 0 auto;
+}
+button {
+	border-radius: 5px;
+  	font-weight: 800;
+  	padding: 0.8rem 0;
+  	width: 17rem;
+  	font-size: 0.9rem;
+  	text-align: center;
+  	display: block;
+  	margin: 0 auto;
+}
+footer {
+	margin: 0 auto;
+	padding: 2rem 0 2rem 0;
+	font-size: 0.6rem;
+	font-weight: 600;
+	background-color: #121212;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+/***************************************
+/*Class styles for the header section
+/***************************************/
+.head_area h2 {
+	text-align: center;
+	margin: 9rem 0 10.5rem 0;
+	font-weight: 600;
+	color: rgba(255,255,255,1);
+	font-size: 1.5rem;
+}
+.get_it {
+	background: #f9e42e;
+  	color: #033048;
+  	font-size: 0.75rem;
+	font-weight: 800;
+	padding: 1rem 0 1rem 0;
+}
+/***************************************
+/*Class styles for the benefits section
+/***************************************/
+.benefit_article {
+	background-color: #f0efef;	
+}
+.benefits {
+	color: #033048;
+	width: 60rem;
+	margin: 0 auto;
+	height: 23rem;
+}
+.benefits h2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	padding: 5.7rem 0 3rem;
+	color: #033048;
+}
+.benefits p, li {
+	font-size: 0.8rem;
+	font-weight: 300;
+	color: #606161;
+}
+.benefits ul {
+	list-style: disc;
+	margin: 2rem 0 0 2.5rem;
+}
+/***************************************
+/*Class styles for the testimonial section
+/***************************************/
+.testimonial_article {
+	background: url(../images/testimonial_bg.jpg) no-repeat top center rgba(0,0,0,1);
+	background-size: cover;
+	height: 12rem;
+	color: #606161;
+}
+.testimonial {
+	font-size: 1.1rem;
+	width: 37.5rem;
+	margin: 0 auto;
+	text-align: center;
+	padding: 3rem 0 3rem;
+}
+.testimonial h2 {
+	font-weight: 300;
+	padding-bottom: 2rem;
+	font-style: italic;
+}
+.testimonial span {
+	font-weight: 600;
+}
+/***************************************
+/*Class styles for the sign up button
+/***************************************/
+.sign_up {
+	background-color: #f9e42e;
+	height: 6.5rem;
+}
+.sign_up section {
+	padding: 1.8rem 0 1rem;
+}
+.sign_up button {
+	font-size: 0.75rem;
+	font-weight: 800;
+	padding: 1rem 0 1rem 0;
+	background-color: #033048;
+	color: rgba(255,255,255,1);
+}
+/***************************************
+/*Class styles for the footer section
+/***************************************/
+.footer h2 {
+	font-weight: 800;
+	font-size: 1.5rem;
+	color: #f9e42e;
+	margin: 0 auto;
+}
+.footer li {
+	padding: 1.3rem 1.4rem 2rem 0.5rem;
+	display: inline-block;
+}
+.footer p {
+	color: #606161;
+	font-size: 0.55rem;
+	font-weight: 600;
+}
+
+/***************************************
+/*Blog page specific entries
+/*Have had to control the use of class names
+/*Common elements became a bit of problem here
+/*e.g. the header as they were so different
+/*Classes were used for specificity
+/***************************************/
+
+.blog-header {
+	background: #033048;
+  	padding: 1.6rem 0;
+  	overflow: hidden;
+  	height: auto;
+}
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #f0efef;
+}
+.logo {
+	font-size: 3rem;
+	font-weight: 800;
+	float: left;
+}
+.blog-header-nav {
+	float: right;
+	margin-top: 1rem;
+
+}
+.blog-header-nav ul li {
+	display: inline-block;
+	margin: 0 0 0 2.5rem;
+  	font-size: 1.5rem;
+}
+.blog-header-nav a {
+	text-decoration: none;
+	color: #f9e42e;
+}
+.blog-main-body {
+	margin-top: 5rem;
+}
+.blog-entry {
+	/* width: 43rem; */
+	width: 42.5rem;
+	display: inline-block;
+	margin: 0 1.25rem 0 0;
+	vertical-align: top;
+}
+.blog-update {
+	width: 100%;
+	border-bottom: 1px solid #043049;
+  	padding-bottom: 2.5rem;
+  	margin-bottom: 2.5rem;
+  	font-family: 'Open Sans', arial, sans-serif;
+}
+.blog-update h2 {
+	font-weight: 600;
+  	font-size: 2.5rem;
+  	line-height: 1.3;
+  	margin-bottom: 1.8rem;
+}
+.blog-update img {
+	margin-bottom: 1.8rem;
+	width: 100%;
+}
+.blog-update p {
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1.2;
+	font-family: 'Open Sans', arial, sans-serif;
+}
+.blog-update p:first-of-type:first-letter {
+	float: left;
+  	font-size: 5rem;
+  	line-height: 4rem;
+  	padding-top: 0.25rem;
+  	padding-right: 0.5rem;
+  	padding-left: 0.25rem;
+  	font-weight: 600;
+}
+.read {
+	text-align: right;
+	margin-top: 1.8rem;
+}
+.read a {
+	color: #033048;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.sidebar {
+	display: inline-block;
+	width: 15.5rem;
+	vertical-align: top;
+}
+.sidebar h3 {
+	font-size: 2rem;
+	font-weight: 800;
+  	margin-bottom: 1rem;
+  	color: #043049;
+
+}
+.sidebar ul {
+	margin-bottom: 2.5rem;
+}
+.sidebar ul li a {
+	color: #043049;
+  	font-size: 1.5rem;
+  	line-height: 1.2;
+  	font-weight: 300;
+}
+.sidebar p {
+	font-size: 1.4rem;
+  	line-height: 1.1;
+  	margin-bottom: 2.5rem;
+  	font-weight: 300;
+}
+
+/***************************************
+/*Media codes section for responsive
+/*design work - following bootstrap
+/*sizing boundaries for this
+/*I've used rem sizing throughout so I 
+/*am aiming to control this by just resetting 
+/*root font-size each time
+/***************************************/
+@media (max-width: 992px) {
+	html {
+		font-size: 80%;
+	}
+}
+@media (max-width: 769px) {
+	html {
+		font-size: 60%;
+	}
+}
+@media (max-width: 600px) {
+	html {
+		font-size: 40%;
+	}
+}
